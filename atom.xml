@@ -4,7 +4,7 @@
   <title><![CDATA[Manufacturing Big Data]]></title>
   <link href="http://www.manufacturingbigdata.com/atom.xml" rel="self"/>
   <link href="http://www.manufacturingbigdata.com/"/>
-  <updated>2012-08-22T14:05:20-07:00</updated>
+  <updated>2012-08-31T23:31:14-07:00</updated>
   <id>http://www.manufacturingbigdata.com/</id>
   <author>
     <name><![CDATA[System Insights]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Process Traceability and Big Data]]></title>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/08/31/traceability/"/>
+    <updated>2012-08-31T22:47:00-07:00</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/08/31/traceability</id>
+    <content type="html"><![CDATA[<p>In a previous post we looked at the different things we can do with Big Data. Lets examine one of the applications in more detail: Process Traceability.</p>
+
+<p>Process Traceability can be understood as being able to trace every process that happened to a part as it got manufactured. Its important to make a distinction here between <em>Part</em> Traceability and <em>Process</em> Traceability. Part Traceability primarily deals with what part was manufactured, and when. Process Traceability, on the other hand, builds on this information, and expands it greatly to understand exactly how the part was manufactured. Process Traceability is a key requirement in Aerospace manufacturing since manufacturing defects can have severe impacts on the quality of parts, and with capable Process Traceability systems we can go back in time and find out exactly how and when the manufacturing defect was introduced into the part. Of course, Process Traceability has applications in other quality-critical domins as well including medical devices and engine components.</p>
+
+<p>Currently, most companies only have Part Traceability systems (if any) &#8211; they know when which part was manufactured. When automated, this type of data is collected by MES or ERP systems, and with the right kind of aggregation and rollups, the data can reveal when a particular batch of parts was manufatured and what was the heat number (or lot number) of the castings/forgings that went into it. But this is not enough to fully understand what happened when a part was made. To build a full-fledged Process Traceability system, lets see what kind of data we can collect from the shopfloor:</p>
+
+<ul>
+<li><strong>Identity</strong> data is the most basic kind required for part traceability. This data tells us what is being made, how much was made, and when was it made. <em>Examples: Heat ID, Batch ID, Operator ID.</em></li>
+<li><strong>Operational</strong> data can tell us what the machine was doing when it had a part associated with it. We can understand the utilization of a device when it was operating on a part, how long the device was in &#8220;auto&#8221; mode versus &#8220;manual&#8221; mode, and the different downtimes that device experienced when it was working on the part. Knowing the downtimes, for instance, can indicate potential issues with part quality. For example, if a device had repeated unplanned maintenance downtimes when it had a part on it, its quite likely that the part has some quality problems as well, and might require additional metrology. <em>Examples: Device uptime, downtime, modes, states.</em></li>
+<li><strong>Diagnostic</strong> data can further embellish the correlations that we can get started with using Operational data. Alarm and condition data can reveal specific issues in the device that is manufaturing a part. <em>Examples: Alarms, warnings, messages, notifications.</em></li>
+<li><strong>Process</strong> data can help us get into a lot more detail, and can reveal how specific features were generated on the part. For example, in high speed machining of aerospace alloys, its very important to preserve a specific chip velocity when features are being created. But interpolation errors and machine tool limitations can result in significant variations between the actual feedrate and the planned feedrate. With process data, we can precisely know when these deviations happened, and can use it in understanding its impact. <em>Examples: Positions, velocities, acceleration, flow rates.</em></li>
+<li><strong>Environmental</strong> data can tell us the impact of the part as its being manufactured. With detailed knowledge of the resource flows associated with  the part, we can estimate its environmental impact. A high level of detail can also reveal which stages of the production process have the greatest impact, and that knowledge can help in targeting energy efficiency improvements. <em>Examples: Resource usage, energy consumption, effluents and emissions.</em></li>
+</ul>
+
+
+<p>The bigger challenge, is to be able to intelligently and efficiently operate on this massive set of data, and find pertinent information associated with a part. And here we can broadly look at three kinds of queries:</p>
+
+<ul>
+<li><strong>Part Search</strong>: Here we are trying to find all the information associated with a specific part (or family of parts). We start with some identifying characteristic for the part (or the family of parts). This can be a Part ID, a Heat ID, or even the day the part was manufactured. We can also identify parts based on other events, like the first part manufactured after a power outage. Information associated with a part can include all of the five kinds discussed above.</li>
+<li><strong>Similarity Search</strong>: Here we are trying to find similar parts based on one or more specific parts that have been identified. The idea here is that we have flagged a certain part or set of parts, and we want to scan our historical system and find other parts that share a similar process history. This is very useful when parts are being quarantined after a quality spill and we are trying to find all the other parts that need to be quarantined. If we know the ID of one part, then we can find other parts similar to it based on a variety of criteria, including: heat code, operator who made the defective part, machine condition, and alarm sequence during manufacture.</li>
+<li><strong>&#8220;Black Swan&#8221; Search</strong>: This is perhaps the most interesting application of a Process Traceability system, and it looks at identifying &#8220;black swans&#8221;, or the rare events that are anomalous to the norm. These queries will attempt to find parts that have been manufactured differently from the rest (starkly or subtly). These could reveal potential problems in the production process before it is identified by the customer. Examples include: excessive spindle loads, erratic feedrate override, and anomalous energy consumption during machining.</li>
+</ul>
+
+
+<p>Now, in order to bring this level of Process Traceability to the manufacturing shopfloor we need software that is capable of handling massive amount of shopfloor data and operating on it to enable the kind of querying and decision making discussed here. Our vimana manufacturing big data platform does just that. You can learn more about it <a href="http://www.systeminsights.com/vimana">here</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[IMTS 2012]]></title>
@@ -712,21 +745,6 @@ First, lets start with how the &#8220;Big Data&#8221; is defined:</p>
 <p>Another area that needs to be considered is the quality measurement data collected from gauges and coordinate measurement devices and from process metrology. The information collected for the part measurements will be associated with the part itself through a parent reference. The part may or may not need to be updated to refer back to the measurement data, but this could be done. The measurements may reference a quality execution plan for that step and may replicate the tolerance information as well as the geometric information as well.</p>
 
 <p>We will be talking more about Parts in MTConnect as we work on the standard. Watch this space!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Reports of Manufacturing's Death Greatly Exaggerated]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/01/02/Reports-of-Manufacturing%27s-Death-Greatly-Exaggerated/"/>
-    <updated>2012-01-02T20:16:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/01/02/Reports-of-Manufacturing&#8217;s-Death-Greatly-Exaggerated</id>
-    <content type="html"><![CDATA[<p>Scott Anderson, a senior economist at Wells Fargo, in an interview with the Star Tribune (hat tip to @JHJackoCMO for tweeting about this):</p>
-
-<blockquote><p>&#8230; before 1980 there was a strong positive correlation between manufacturing and jobs, but since then that correlation has basically been turned upside down. What that means is that we&#8217;re producing more and more, yet we&#8217;re actually losing jobs. The extent of that shift tells us there&#8217;s a structural change that&#8217;s gone on that deserves a deeper look.</p></blockquote>
-
-<p>The interesting implication here is that companies are finding ways of increasing their output even as their labor size shrinks. This places greater importance on the tools that manufacturers have available to analyze and improve the efficiency of their operations. Greater automation means that more data is being generated by more equipment and we will need ways of reasoning over them in both realtime and over longer (historical) periods. Big Data to the rescue? We think so!</p>
-
-<p>A good example is again going back to the MTConnect Alarms discussed in the previous post. While previously shops might have had one operator per machine tool at all times, with greater automation and multi-tasking machines, one operator might be supervising a cell of several machine tools. Instead of barraging the operator with all the Alarms these machines generate, we can apply filtering and classification techniques to only display pertinent Alarms. We will examine some of these techniques in an upcoming post.</p>
 ]]></content>
   </entry>
   
