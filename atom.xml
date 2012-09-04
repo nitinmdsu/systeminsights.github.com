@@ -4,7 +4,7 @@
   <title><![CDATA[Manufacturing Big Data]]></title>
   <link href="http://www.manufacturingbigdata.com/atom.xml" rel="self"/>
   <link href="http://www.manufacturingbigdata.com/"/>
-  <updated>2012-08-31T23:31:14-07:00</updated>
+  <updated>2012-09-04T11:21:21-07:00</updated>
   <id>http://www.manufacturingbigdata.com/</id>
   <author>
     <name><![CDATA[System Insights]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Oracle Partnership at IMTS]]></title>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/09/04/imts-java-booth/"/>
+    <updated>2012-09-04T09:53:00-07:00</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/09/04/imts-java-booth</id>
+    <content type="html"><![CDATA[<p>We are very happy to announce that we will be partnering with <a href="http://www.oracle.com">Oracle</a> during <a href="http://www.imts.com/">IMTS</a> to showcase integrated solutions for manufacturing data interoperability, collection, and analysis. We will be discussing the use of Java SE Embedded in building a ubiquitous embedded platform for collecting data from the shopfloor. <a href="http://www.oracle.com/technetwork/java/embedded/overview/javase/index.html">Java SE Embedded</a> has been used in products across a diverse spectrum of industries, ranging from RFID readers to parking meters to ATMs to in-flight video systems to POS terminals to wearable systems. This makes it a great fit in the manufacturing world, where we need hardware devices that can seamlessly and ubiquitously integrate data across the shop floor.</p>
+
+<p>Java SE Embedded will be applied in developing a hardware platform that can collect data across proprietary interfaces in the shopfloor, perform basic analysis, and then stream it in the MTConnect standard. Selecting MTConnect was a no-brainer – it is widely supported by the industry, it is lightweight and easy to implement, and gives us a lot of flexibility in deployment. MTConnect is also natively supported by our <a href="http://www.systeminsights.com">vimana</a> platform for manufacturing big data analysis, and MTConnect allows us to quickly integrate the factory data feeds for further analysis and reporting using vimana.</p>
+
+<p>We are very excited about our partnership with Oracle, and will be talking more about it at IMTS. You can catch us Booth N-6995 with Oracle, between September 10th and 15th, at McCormick Place, Chicago.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Process Traceability and Big Data]]></title>
@@ -721,30 +734,6 @@ First, lets start with how the &#8220;Big Data&#8221; is defined:</p>
 <p>The BEC metric is based on the average power consumed during these states. The three terms are weighted by duration factors to estimate the energy consumed by the machine during one hour of representative operation, where it is assumed that the machine tool spends 25% of the duration in tare usage, 25% in component usage (air-cutting/warmup etc.,) and 50% in machining usage.</p>
 
 <p>We will be following up with case studies looking at how this standard was applied in comparing different machine tools.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[It's all about Parts]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/01/10/It%27s-all-about-Parts/"/>
-    <updated>2012-01-10T11:00:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/01/10/It&#8217;s-all-about-Parts</id>
-    <content type="html"><![CDATA[<p>As we begin work on the 1.3 version of the MTConnect standard, the next big area to tackle is Parts. A part can be roughly defined as a piece of material that will have some transformative processes done to it to obtain another shape, composition, or structure. Along the way information will be collected about these transformative processes as they are performed and validated.</p>
-
-<p>A part itself is an asset, but for the treatment in the standard we will consider it as a collection of assets. These assets are composed of the various programs, measurement plans, and processes that will be applied to it. They may also indicate the schedule and operation, but that is questionable. If we consider a part an asset that references other assets, then the problem becomes one of asset references, instead of having a master document that has everything.</p>
-
-<p>One consideration is to make parts have the following information:</p>
-
-<ol>
-<li>Descriptive information</li>
-<li>Reference to part programs for each device</li>
-<li>Reference to quality execution program for each device</li>
-</ol>
-
-
-<p>Another area that needs to be considered is the quality measurement data collected from gauges and coordinate measurement devices and from process metrology. The information collected for the part measurements will be associated with the part itself through a parent reference. The part may or may not need to be updated to refer back to the measurement data, but this could be done. The measurements may reference a quality execution plan for that step and may replicate the tolerance information as well as the geometric information as well.</p>
-
-<p>We will be talking more about Parts in MTConnect as we work on the standard. Watch this space!</p>
 ]]></content>
   </entry>
   
