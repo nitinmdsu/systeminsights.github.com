@@ -4,7 +4,7 @@
   <title><![CDATA[Manufacturing Big Data]]></title>
   <link href="http://www.manufacturingbigdata.com/atom.xml" rel="self"/>
   <link href="http://www.manufacturingbigdata.com/"/>
-  <updated>2012-09-04T11:23:36-07:00</updated>
+  <updated>2013-04-01T11:47:31+05:30</updated>
   <id>http://www.manufacturingbigdata.com/</id>
   <author>
     <name><![CDATA[System Insights]]></name>
@@ -14,9 +14,50 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Green Manufacturing Book]]></title>
+    <link href="http://www.manufacturingbigdata.com/blog/2013/04/01/green-manufacturing-book/"/>
+    <updated>2013-04-01T11:15:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2013/04/01/green-manufacturing-book</id>
+    <content type="html"><![CDATA[<p>Had questions about Green Manufacturing but were too bashful to ask? You are in luck, you can pick up a copy of the excellent &#8220;Green Manufacturing: Fundamentals and Applications&#8221; from <a href="http://www.amazon.com/Green-Manufacturing-Fundamentals-Applications-Technology/dp/1441960155/">Amazon.com</a> and other fashionable purveyors of fine reading material. Full Disclosure: I have co-authored 4 chapters in the book, including the penultimate chapter &#8220;Enabling Technologies for Assuring Green Manufacturing&#8221;, which, among other things, talks  about the need for a highly scalable software architecture to enable realtime monitoring and reporting of manufacturing performance (hint: we have a built a little <a href="http://www.systeminsights.com/vimana">product</a> to address that need).</p>
+
+<p>&#8220;Green Manufacturing&#8221; is based on research from the <a href="http://lmas.berkeley.edu">Laboratory for Manufacturing and Sustainability</a> and is edited by Prof. David Dornfeld, the Director of LMAS and the Chairman of the Department of Mechanical Engineering at UC Berkeley. For more information, you can check out his excellent <a href="http://green-manufacturing.blogspot.com">blog</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaOne Presentation]]></title>
+    <link href="http://www.manufacturingbigdata.com/blog/2013/01/08/javaone-presentation/"/>
+    <updated>2013-01-08T09:28:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2013/01/08/javaone-presentation</id>
+    <content type="html"><![CDATA[<p>We presented at <a href="http://www.oracle.com/javaone/index.html">JavaOne</a> in early October 2012 in San Francisco on applying Embedded technologies in enabling Manufacturing Big Data. Here are our slides.</p>
+
+<script async class="speakerdeck-embed" data-id="50726683b1808300020091bb" data-ratio="1.7444633730834753" src="http://www.manufacturingbigdata.com//speakerdeck.com/assets/embed.js"></script>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Precision Manufacturing Lecture Videos]]></title>
+    <link href="http://www.manufacturingbigdata.com/blog/2013/01/08/precision-manufacturing/"/>
+    <updated>2013-01-08T09:00:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2013/01/08/precision-manufacturing</id>
+    <content type="html"><![CDATA[<p>I am back to my regular blogging duties after a hiatus of a few months.</p>
+
+<p>Part of the reason I was away was because I was teaching the graduate course &#8220;Precision Manufacturing&#8221; at UC Berkeley in the Department of Mechanical Engineering.</p>
+
+<p>Thanks to the webcast facilities at Cal, videos of all of the classroom lectures are available on Youtube <a href="http://www.youtube.com/watch?v=vqxpT3GBB8U&amp;list=PLbCV7-4PxKsQJ7VtY13oipOEDrCVXdkhy">here</a>. If you have any questions or feedback, please leave it in the comments!</p>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/vqxpT3GBB8U?list=PLbCV7-4PxKsQJ7VtY13oipOEDrCVXdkhy" frameborder="0" allowfullscreen></iframe>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Oracle Partnership at IMTS]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/09/04/imts-oracle-partnership/"/>
-    <updated>2012-09-04T09:53:00-07:00</updated>
+    <updated>2012-09-04T09:53:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/09/04/imts-oracle-partnership</id>
     <content type="html"><![CDATA[<p>We are very happy to announce that we will be partnering with <a href="http://www.oracle.com">Oracle</a> during <a href="http://www.imts.com/">IMTS</a> to showcase integrated solutions for manufacturing data interoperability, collection, and analysis. We will be discussing the use of Java SE Embedded in building a ubiquitous embedded platform for collecting data from the shopfloor. <a href="http://www.oracle.com/technetwork/java/embedded/overview/javase/index.html">Java SE Embedded</a> has been used in products across a diverse spectrum of industries, ranging from RFID readers to parking meters to ATMs to in-flight video systems to POS terminals to wearable systems. This makes it a great fit in the manufacturing world, where we need hardware devices that can seamlessly and ubiquitously integrate data across the shop floor.</p>
 
@@ -29,7 +70,7 @@
   <entry>
     <title type="html"><![CDATA[Process Traceability and Big Data]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/08/31/traceability/"/>
-    <updated>2012-08-31T22:47:00-07:00</updated>
+    <updated>2012-08-31T22:47:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/08/31/traceability</id>
     <content type="html"><![CDATA[<p>In a previous post we looked at the different things we can do with Big Data. Lets examine one of the applications in more detail: Process Traceability.</p>
 
@@ -62,7 +103,7 @@
   <entry>
     <title type="html"><![CDATA[IMTS 2012]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/08/22/updates-and-imts/"/>
-    <updated>2012-08-22T13:54:00-07:00</updated>
+    <updated>2012-08-22T13:54:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/08/22/updates-and-imts</id>
     <content type="html"><![CDATA[<p>We are back after a brief hiatus. The last few weeks have been eventful, to say the least, as we get ready for <a href="http://www.imts.com">IMTS 2012</a> in Chicago between September 10th and 15th. At IMTS we will be showcasing the <strong>vimana</strong> software platform for manufacturing productivity improvement and the <strong>ConnectOne</strong> hardware platform for MTConnect-based data acquisition and interoperability.</p>
 
@@ -73,7 +114,7 @@
   <entry>
     <title type="html"><![CDATA[Energy Regulations in Tamil Nadu, India]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/07/10/tneb-regulations/"/>
-    <updated>2012-07-10T11:00:00-07:00</updated>
+    <updated>2012-07-10T11:00:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/07/10/tneb-regulations</id>
     <content type="html"><![CDATA[<p>Industrial energy consumers in Tamil Nadu, India have seen a sharp increase in energy costs beginning from April 2012. In this post we look at the revised tariff of the Tamil Nadu Electricity Board (TNEB), and examine its impact on the overall energy costs for a manufacturing plant.</p>
 
@@ -210,7 +251,7 @@
   <entry>
     <title type="html"><![CDATA[Monitoring MTConnect Streams: MTConnect Graphr]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/07/02/monitoring-mtc-streams-mtconnect-graphr/"/>
-    <updated>2012-07-02T11:15:00-07:00</updated>
+    <updated>2012-07-02T11:15:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/07/02/monitoring-mtc-streams-mtconnect-graphr</id>
     <content type="html"><![CDATA[<p>A few months back I took up the fun task of exploring MTConnect streams and the amazing possibilities which it presented to a developer. That culminated into a web base monitoring app, MTConnect Graphr, which can now be downloaded from <a href="http://github.com/princearora/mtconnect-graphr">Github</a>. In this post I&#8217;ll run down through the development process of the same.</p>
 
@@ -333,7 +374,7 @@ var line1 = new TimeSeries();
   <entry>
     <title type="html"><![CDATA[Octopress + S3 + Cloudfront]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/06/13/s3/"/>
-    <updated>2012-06-13T07:03:00-07:00</updated>
+    <updated>2012-06-13T07:03:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/06/13/s3</id>
     <content type="html"><![CDATA[<p>We have finally migrated to Octopress from Google Blogger. Feels a lot better to write in Markdown than using Blogger&#8217;s editor! The static content is being stored in an S3 bucket and served through AWS Cloudfront.</p>
 
@@ -344,7 +385,7 @@ var line1 = new TimeSeries();
   <entry>
     <title type="html"><![CDATA[Why SaaS?]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/06/08/why-saas/"/>
-    <updated>2012-06-08T11:16:00-07:00</updated>
+    <updated>2012-06-08T11:16:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/06/08/why-saas</id>
     <content type="html"><![CDATA[<p>A common question that we always get is why vimana is a software-as-a-service (SaaS) product. Surely, given how much data we are collecting, it must be easier to run it locally inside a plant, right? Well, if all vimana was doing was creating plots of part counts and utilization, then yes, running it locally does make sense. But vimana does a lot more &#8211; it helps understand the patterns behind productivity (and the lack thereof), and being able to support these capabilities requires a whole lot more of computational resources.</p>
 
@@ -364,7 +405,7 @@ var line1 = new TimeSeries();
   <entry>
     <title type="html"><![CDATA[BEC Article in Livebetter Magazine]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/06/08/livebetter-article/"/>
-    <updated>2012-06-08T08:23:00-07:00</updated>
+    <updated>2012-06-08T08:23:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/06/08/livebetter-article</id>
     <content type="html"><![CDATA[<p>The June issue of the <a href="http://livebettermagazine.com">Livebetter Magazine</a> features an article about the BEC standard by Ralph Resnick from the National Center for Defense Manufacturing and Machining and myself. You can read the article <a href="http://livebettermagazine.com/eng/magazine/article_detail.lasso?id=307">here</a>.</p>
 ]]></content>
@@ -373,7 +414,7 @@ var line1 = new TimeSeries();
   <entry>
     <title type="html"><![CDATA[Powered by Octopress]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/05/30/powered-by-octopress/"/>
-    <updated>2012-05-30T10:00:00-07:00</updated>
+    <updated>2012-05-30T10:00:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/05/30/powered-by-octopress</id>
     <content type="html"><![CDATA[<p>We are moving to the Octopress framework. The blog will be hosted on Github Pages.</p>
 ]]></content>
@@ -382,7 +423,7 @@ var line1 = new TimeSeries();
   <entry>
     <title type="html"><![CDATA[MongoDB and Replica Sets]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/05/08/mongo-replica-sets/"/>
-    <updated>2012-05-08T10:50:00-07:00</updated>
+    <updated>2012-05-08T10:50:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/05/08/mongo-replica-sets</id>
     <content type="html"><![CDATA[<h2>Why do we care</h2>
 
@@ -494,7 +535,7 @@ Deepak.</p>
   <entry>
     <title type="html"><![CDATA[Welcome Deepak!]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/04/14/welcome-deepak/"/>
-    <updated>2012-04-14T10:48:00-07:00</updated>
+    <updated>2012-04-14T10:48:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/04/14/welcome-deepak</id>
     <content type="html"><![CDATA[<p>We would like to welcome Deepak Prasanna to System Insights. Deepak starts this month as a Software Developer working from our Chennai office. You will be hearing from him soon in this blog.</p>
 ]]></content>
@@ -503,7 +544,7 @@ Deepak.</p>
   <entry>
     <title type="html"><![CDATA[McKinsey on (Manufacturing) Big Data - Part 2 - What do do with it]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/03/21/McKinsey-Part-2-What-do-do-with-it/"/>
-    <updated>2012-03-21T01:17:00-07:00</updated>
+    <updated>2012-03-21T13:47:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/03/21/McKinsey-Part-2-What-do-do-with-it</id>
     <content type="html"><![CDATA[<p>We are back studying McKinsey&#8217;s report on Big Data following the last post, and here lets take a closer look at what we can do with Big Data. The report identifies several &#8220;levers&#8221; where data can be used to improve manufacturing performance (see below), and of these levers, we are primarily interested in these two:</p>
 
@@ -547,7 +588,7 @@ Deepak.</p>
   <entry>
     <title type="html"><![CDATA[Setting up a MTConnect Agent on a Linux (Ubuntu) machine]]></title>
     <link href="http://www.manufacturingbigdata.com/blog/2012/03/16/Setting-up-a-MTConnect-Agent-on-a-Linux-machine/"/>
-    <updated>2012-03-16T03:40:00-07:00</updated>
+    <updated>2012-03-16T16:10:00+05:30</updated>
     <id>http://www.manufacturingbigdata.com/blog/2012/03/16/Setting-up-a-MTConnect-Agent-on-a-Linux-machine</id>
     <content type="html"><![CDATA[<p>This was blogged first at my personal blog <a href="http://princearora.wordpress.com/2012/02/24/setting-up-a-mtconnect-agent-on-a-unixubuntu-machine/">here</a>.</p>
 
@@ -589,9 +630,9 @@ Deepak.</p>
   
   <entry>
     <title type="html"><![CDATA[Introducing our Intern - Prince Arora]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/03/15/Introducing-our-Intern-Price-Arora/"/>
-    <updated>2012-03-15T21:00:00-07:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/03/15/Introducing-our-Intern-Price-Arora</id>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/03/16/Introducing-our-Intern-Price-Arora/"/>
+    <updated>2012-03-16T09:30:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/03/16/Introducing-our-Intern-Price-Arora</id>
     <content type="html"><![CDATA[<p>I want to introduce Prince Arora, a student from IIT Madras, who is interning with us at our Chennai office. Prince is developing a suite of MTConnect-based tools to track the maintenance status of machine tools. He is blogging about his experiences at System Insights at his blog, <a href="http://princearora.in">The 20four hour log</a>.</p>
 
 <p>Prince started out by building a simple webapp to display various maintenance-related parameters from an MTConnect data stream. Specifically <a href="http://princearora.wordpress.com/2012/02/14/mtconnect-the-problem-statement/">he developed an app</a> to:</p>
@@ -618,9 +659,9 @@ Deepak.</p>
   
   <entry>
     <title type="html"><![CDATA[MTConnect Screencasts]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/02/27/MTConnect-Screencasts/"/>
-    <updated>2012-02-27T12:57:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/02/27/MTConnect-Screencasts</id>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/02/28/MTConnect-Screencasts/"/>
+    <updated>2012-02-28T02:27:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/02/28/MTConnect-Screencasts</id>
     <content type="html"><![CDATA[<p>I will producing a series of MTConnect screencasts in the near future on various topics. The first in the series will cover extending the MTConnect standard by adding custom Data Items and Components. The tutorial will take you through all the steps necessary to develop an extension using the open source tools and deploy an integrated solution with all the schema files deployed on the MTConnect Agent. I am working on the screen casts right now and learning my way through the various technologies necessary to make a usable online education series.</p>
 
 <p>If this is a success, we will be producing additional tutorials on adapter development demonstrating how to get data from machine tools as well as many more. Another I&#8217;m considering will provide guidance on collecting tooling data from your controller and publishing it through MTConnect in compliance with part 1.2. All the source code, tools, and documentation will be made freely available to the community. I am currently looking for an XMLSpy equivalent or at least a good schema validator to use since XMLSpy has a high price tag. If anyone knows of anything, please reply. Any help in that area will be appreciated. I have used XMLSpy for many years, but for the purposes of these tutorials, I don&#8217;t want to burden everyone with the cost, even though it is a great tool.</p>
@@ -631,9 +672,9 @@ Deepak.</p>
   
   <entry>
     <title type="html"><![CDATA[Presentation on Baseline Energy Consumption]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/02/16/Presentation-on-BEC/"/>
-    <updated>2012-02-16T23:22:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/02/16/Presentation-on-BEC</id>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/02/17/Presentation-on-BEC/"/>
+    <updated>2012-02-17T12:52:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/02/17/Presentation-on-BEC</id>
     <content type="html"><![CDATA[<p>Following up to the previous posts (here and here) on Baseline Energy Consumption, here is a presentation about the standard:</p>
 
 <script src="http://speakerdeck.com/embed/4f3dd5bcdf5d29001f0047d8.js"></script>
@@ -643,9 +684,9 @@ Deepak.</p>
   
   <entry>
     <title type="html"><![CDATA[McKinsey on (Manufacturing) Big Data - Part 1 - How Much Data?]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/02/13/McKinsey-Part-1-How-Much-Data/"/>
-    <updated>2012-02-13T22:50:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/02/13/McKinsey-Part-1-How-Much-Data</id>
+    <link href="http://www.manufacturingbigdata.com/blog/2012/02/14/McKinsey-Part-1-How-Much-Data/"/>
+    <updated>2012-02-14T12:20:00+05:30</updated>
+    <id>http://www.manufacturingbigdata.com/blog/2012/02/14/McKinsey-Part-1-How-Much-Data</id>
     <content type="html"><![CDATA[<p>McKinsey recently published a report about Big Data, going into considerable detail about its impact on different fields, including manufacturing. In the next few posts, I will be digging into this report looking at the specific impacts of big data on machining-related manufacturing, focusing on ways that improve productivity and efficiency.
 First, lets start with how the &#8220;Big Data&#8221; is defined:</p>
 
@@ -663,77 +704,6 @@ First, lets start with how the &#8220;Big Data&#8221; is defined:</p>
 <p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-14-McKinsey-Part-1-How-Much-Data-Sectoral-Data-Storage.png"></p>
 
 <p>McKinsey estimates about 966 PB of stored data in the Discrete Manufacturing sector (see above). Add Process data to that, we are looking at greatly increasing the total storage requirements of the sector. Manufacturing has the largest storage needs of all the surveyed sectors, and the potential of Big Data analytics on process data will further increase them.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Big Data in the news]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/02/13/Big-Data-in-the-news/"/>
-    <updated>2012-02-13T00:19:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/02/13/Big-Data-in-the-news</id>
-    <content type="html"><![CDATA[<p>The New York Times <a href="http://www.nytimes.com/2012/02/12/sunday-review/big-datas-impact-in-the-world.html">talks</a> about the impact of Big Data across a variety of fields, including retailing, voice recognition, and public health. They cite a report by Prof. Erik Brynjolfsson from MIT Sloan that</p>
-
-<blockquote><p>studied 179 large companies and found that those adopting “data-driven decision making” achieved productivity gains that were 5 percent to 6 percent higher than other factors could explain.</p></blockquote>
-
-<p>Certainly we can expect a larger impact in productivity gains in manufacturing. Traditional &#8220;data driven&#8221; techniques like process monitoring has itself brought productivity gains of over 10%. Big Data Analytics gives the opportunity to wring out further gains, because of the ability to handle unstructured data, which the article mentions:</p>
-
-<blockquote><p>Data is not only becoming more available but also more understandable to computers. Most of the Big Data surge is data in the wild — unruly stuff like words, images and video on the Web and those streams of sensor data. It is called unstructured data and is not typically grist for traditional databases.</p></blockquote>
-
-<p>But the computer tools for gleaning knowledge and insights from the Internet era’s vast trove of unstructured data are fast gaining ground. At the forefront are the rapidly advancing techniques of artificial intelligence like natural-language processing, pattern recognition and machine learning.</p>
-
-<p>We apply similar tools and techniques to look at unstructured manufacturing data. More about this coming up!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Baseline Energy Consumption - Case Study 1]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/02/08/BEC-Case-Study-1/"/>
-    <updated>2012-02-08T02:36:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/02/08/BEC-Case-Study-1</id>
-    <content type="html"><![CDATA[<p>The BEC standard discussed in the last post was applied in comparing the performance of three similar small-sized Lathes. The three devices were as follows (all brand names anonymized to protect the innocent!):</p>
-
-<p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-08-BEC-Case-Study-1-A.png"></p>
-
-<p>The test conditions were as follows:</p>
-
-<p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-08-BEC-Case-Study-1-B.png"></p>
-
-<p>The BEC metric for the three devices is as follows:</p>
-
-<p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-08-BEC-Case-Study-1-C.png"></p>
-
-<p>Here is how the metric looks broken down into its components:</p>
-
-<p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-08-BEC-Case-Study-1-D.png"></p>
-
-<p>The results showed that Device A consumes significantly less energy than Device B and Device C. Extrapolating the BEC metric, the estimated annual energy usage for these machine tools can be calculated assuming that each device operates for 8,000 hours per year at a cost of US $0.09 per kWh of energy; similarly, the Carbon Footprint of the devices is also calculated, assuming a footprint of 0.6 kg CO2-eq/kWh. As we can see in the table below, selecting Device A saves more than $800/year compared to Device C, and $400/year compared to Device B.</p>
-
-<p><img class="center" src="http://www.manufacturingbigdata.com/images/2012-02-08-BEC-Case-Study-1-E.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Baseline Energy Consumption]]></title>
-    <link href="http://www.manufacturingbigdata.com/blog/2012/01/16/Baseline-Energy-Consumption/"/>
-    <updated>2012-01-16T23:39:00-08:00</updated>
-    <id>http://www.manufacturingbigdata.com/blog/2012/01/16/Baseline-Energy-Consumption</id>
-    <content type="html"><![CDATA[<p>Measuring machine tool energy consumption has always been tricky because of the diversity and complexity of machine tools. We took a first stab at developing a standard to measure machine tool energy consumption as part of a project supported by General Dynamics – OTS, National Center for Defense Manufacturing and Machining (NCDMM), and AMT. We developed the Baseline Energy Consumption (BEC) metric as a standard measure of the energy consumption of machine tools along with a companion test methodology. Applications of this metric include:</p>
-
-<ul>
-<li>Estimating the approximate energy requirements of operating a machine tool to manufacture a specific part</li>
-<li>Comparing the energy requirements of two machine tools that are being applied in similar activities</li>
-<li>Performing Return-on-Investment calculations to justify energy efficiency improvements in machine tool and machining technologies</li>
-<li>Assessing environmental impact of manufacturing processes from equipment energy consumption</li>
-</ul>
-
-
-<p>A key consideration in designing the test methodology was to ensure that they could be performed within a reasonable amount of a time in a standard industrial setting without requiring any special workpieces, fixtures, or equipment. This pragmatic approach was explicitly selected because the goal of this metric is to serve as a figure of merit for the energy consumption of machine tools and manufacturing equipment. This metric does not intend to serve as a precise indication of the energy required by a machine tool to manufacture a specific part or to execute a specific operation. The first edition of the standard focused on measuring the BEC of lathe-type machine tools based on recording the power consumption during a series of controlled tests.</p>
-
-<p>The energy consumption of a machine tool in a factory environment is determined by the relative time it spends in different states, including, idle, axes movement, and cutting. To capture the effect of these states, the baseline tests measure the average power consumption during tare usage, axes / component usage, and machining usage. Tare usage is measured based on the power consumption of the machine tool when it is in standby with its peripheral units turned on. Component usage is measured based on the power consumption when the machine tool components are being exercised, without any loaded workpiece (analogous to “air-cutting”). Machining usage is measured based on power consumption  during metal cutting at a fixed spindle speed at varying material removal rates on an arbitrary workpiece. These tests are based on the observation that the energy required to remove unit volume of material in a machine tool is largely dependent on the volumetric rate of removal, or material removal rate, and not on the process parameters.</p>
-
-<p>The BEC metric is based on the average power consumed during these states. The three terms are weighted by duration factors to estimate the energy consumed by the machine during one hour of representative operation, where it is assumed that the machine tool spends 25% of the duration in tare usage, 25% in component usage (air-cutting/warmup etc.,) and 50% in machining usage.</p>
-
-<p>We will be following up with case studies looking at how this standard was applied in comparing different machine tools.</p>
 ]]></content>
   </entry>
   
