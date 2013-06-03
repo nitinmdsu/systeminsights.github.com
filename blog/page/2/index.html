@@ -9,7 +9,7 @@
   <meta name="author" content="System Insights">
 
   
-  <meta name="description" content="A common question that we always get is why vimana is a software-as-a-service (SaaS) product. Surely, given how much data we are collecting, it must &hellip;">
+  <meta name="description" content="A few months back I took up the fun task of exploring MTConnect streams and the amazing possibilities which it presented to a developer. That &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,194 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/02/monitoring-mtc-streams-mtconnect-graphr/">Monitoring MTConnect Streams: MTConnect Graphr</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-02T11:15:00+05:30" pubdate data-updated="true">Jul 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A few months back I took up the fun task of exploring MTConnect streams and the amazing possibilities which it presented to a developer. That culminated into a web base monitoring app, MTConnect Graphr, which can now be downloaded from <a href="http://github.com/princearora/mtconnect-graphr">Github</a>. In this post I&#8217;ll run down through the development process of the same.</p>
+
+<p>The web scene has changed remarkably in a past few years. Web applications are expected to be compatible to smartphones and tablets. They are supposed to be clean and responsive. This requirement was enough to persuade me to use <a href="http://twitter.github.com/bootstrap/">Bootstrap by Twitter</a> as the basic framework for the app. It is tiny, expandable and has good documentation to get you started.</p>
+
+<p>Coming to the implementation, the first task was to dynamically connect to the XML stream provided by the MTConnect Agent. Though it sounds pretty easy, the task becomes a bit tricky because it requires a recurring connection with external urls. The easiest way out of this situation is to implement a PHP proxy. For this we write a PHP loader script, and then use it every time we need to connect to an external host.</p>
+
+<pre><code>header('Content-type: application/xml'); //specififying the return content type
+$q = $_GET['url'];
+  handle = fopen($q, "r");              //connecting to the url
+if ($handle) {                          
+    while (!feof($handle)) {
+        $buffer = fgets($handle, 4096);
+        echo $buffer;                  //reading and returning content
+    }
+    fclose($handle);
+}
+</code></pre>
+
+<p>That sums up our <code>loader.php</code>. Next all we need to do is to write a simple function to load the XML file via the proxy.</p>
+
+<pre><code>function getCurrentXML(conn_url) {              //function to retrieve a xml file 
+    var n = "";
+    return $.ajax({
+        url: "loader.php?url=http://"+conn_url, //using the proxy
+        cache: !1,
+        async: !1,
+        dataType: "txt",
+        success: function (t) {
+            n = t
+        }
+    }), n
+}
+</code></pre>
+
+<p>Once we have access to the XML stream, there are a plethora of tools available to parse and get data out of it. I chose to use a combination of jQuery and JSON for the job. The xml2json plugin available <a href="http://www.fyneworks.com/jquery/xml-to-json/">here</a> provided an easy conversion to JSON.</p>
+
+<pre><code>var xmldata = getCurrentXML(conn_url),
+    i = $.xml2json(xmldata);
+</code></pre>
+
+<p>With JSON, life is easy. It can&#8217;t be any simpler to parse data than it is with JSON. All I did was to write regular funtions to parse conditions and device parameters. But there is a catch. Not all XML tags will be meaningful and to make them appear right, we need to write individual functions for each of them. Here I will explain the working of the function used to parse the conditions for all parameters.</p>
+
+<pre><code>this.getCondition = function (n) {
+  var r=new Object();
+  r.type= new Array(),r.value=new Array();
+  var count=0;
+  for (var t = 0; t &lt; n.ComponentStream.length; t++) {
+    var i = n.ComponentStream[t],
+        u = i.name;
+    if (i.Condition)
+    {
+      var v = i.Condition;
+      if(v.Normal){ if(v.Normal.length&gt;1){
+        for(var f =0; f &lt; v.Normal.length; f++)
+        {
+          r.type[count] =  u+' '+v.Normal[f].type;
+          r.value[count++] = "Normal"
+        }}
+      else{
+          r.type[count] =  u+' '+v.Normal.type;
+          r.value[count++] = "Normal"}
+        }
+      ..........
+      //similarly for other conditions 
+     }r.len=count;
+   }
+       return r 
+},
+</code></pre>
+
+<p>Though this takes away the reusability of the script, the data displayed turns out to be easier to comprehend.</p>
+
+<p>With all these pieces in place, a simple requirement is to refresh the input from the MTC stream every few milliseconds. A recursive function with delay takes care of that</p>
+
+<pre><code>var updateFromMTC = function(){
+.....
+  setTimeout('updateFromMTC("'+conn_url+'")' , 1000);
+.....
+}
+</code></pre>
+
+<p>The task we confront next is to display it elegantly. That is taken care by using power of HTML5. The devices in the stream are populated at the top of the page with the color of each dependent on the availability of the device. To display all the parameters we use two empty divs, in which the parameters and the conditions are populated using a javascript user function.</p>
+
+<pre><code>&lt;div class="container" id='SelStats' position='absolute'"&gt;
+  &lt;div id='conditions' position='absolute'&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+var updateSelected = function(){
+ if(thePage.ActiveShape){
+   var selShp = thePage.ActiveShape;
+    var SelDisplay = document.getElementById('SelStats');
+    if(SelDisplay &amp;&amp; selShp){
+     if(selShp.deviceName != ''){
+        $(SelDisplay).empty();
+        $(SelDisplay).append('&lt;b&gt;Machine:&lt;/b&gt;' + selShp.text);
+        ......
+</code></pre>
+
+<p>So, this completes the basic task of monitoring an MTConnect stream. Next we need to plot it. There are some really advanced open source scripts out there to assist plotting data, but for this particular task <a href="http://smoothiecharts.org/">Smoothie Charts</a> seemed a perfect fit to me. It is a really small charting library designed for live streaming data. Integration with the existing code was easy. A few more lines to the code, and it plots like a charm.</p>
+
+<pre><code>var smoothie = new SmoothieChart();
+  smoothie.streamTo(document.getElementById("mycanvas") 3000 /*delay*/);
+var line1 = new TimeSeries();
+  setInterval(function() {line1.append(new Date().getTime(), math.random());}, 3000 /*delay*/);
+</code></pre>
+
+<p>Finally, we need to add an emergency alarm light for the parameter being monitored. A slick form to enter the maximum/minimum value, and a basic function to compare instantaneous values are enough to pull it off. With the div being populated dynamically every few seconds, we need to save some info in a cookie which is made easy by the <a href="https://github.com/carhartl/jquery-cookie/">jQuery-cookie</a> plugin.</p>
+
+<div style="text-align: center;">
+<img src="/images/graphr-1.jpg" width=360 height=600 /> <img src="/images/graphr-2.jpg" width=360 height=600 /> </div>
+
+
+<p>I guess that&#8217;s it. The app is ready to roll. I checked it out locally on a PC, iPOD touch and an android device. Seems to be working fine for me. Let me know if any of you notice anything off about it.</p>
+
+<p>PS: Please ensure that the application is run on a PHP server. Otherwise the application will fail to connect to the stream and all you will see is a white blank page. I&#8217;d recommend WAMP/LAMP for users trying it on their personal PCs.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/13/s3/">Octopress + S3 + Cloudfront</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-13T07:03:00+05:30" pubdate data-updated="true">Jun 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We have finally migrated to Octopress from Google Blogger. Feels a lot better to write in Markdown than using Blogger&#8217;s editor! The static content is being stored in an S3 bucket and served through AWS Cloudfront.</p>
+
+<p>Thank you: <a href="http://www.jerome-bernard.com/blog/2011/08/20/quick-tip-for-easily-deploying-octopress-blog-on-amazon-cloudfront/">Jerome Bernard</a>, <a href="http://blog.jacobelder.com/2012/03/octopress-and-cloudfront/">Jacob Elder</a>, <a href="http://www.octopress.org">Octopress</a>, and <a href="http://www.github.com">Github</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -568,85 +756,6 @@ Deepak.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/28/MTConnect-Screencasts/">MTConnect Screencasts</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-28T02:27:00+05:30" pubdate data-updated="true">Feb 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I will producing a series of MTConnect screencasts in the near future on various topics. The first in the series will cover extending the MTConnect standard by adding custom Data Items and Components. The tutorial will take you through all the steps necessary to develop an extension using the open source tools and deploy an integrated solution with all the schema files deployed on the MTConnect Agent. I am working on the screen casts right now and learning my way through the various technologies necessary to make a usable online education series.</p>
-
-<p>If this is a success, we will be producing additional tutorials on adapter development demonstrating how to get data from machine tools as well as many more. Another I&#8217;m considering will provide guidance on collecting tooling data from your controller and publishing it through MTConnect in compliance with part 1.2. All the source code, tools, and documentation will be made freely available to the community. I am currently looking for an XMLSpy equivalent or at least a good schema validator to use since XMLSpy has a high price tag. If anyone knows of anything, please reply. Any help in that area will be appreciated. I have used XMLSpy for many years, but for the purposes of these tutorials, I don&#8217;t want to burden everyone with the cost, even though it is a great tool.</p>
-
-<p>If there are any tutorials you would be interested in seeing, I will be taking suggestions and will prioritize based on the responses I get. Otherwise I will make up my own priorities and guess as best I can what the community would like to see&#8230;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/17/Presentation-on-BEC/">Presentation on Baseline Energy Consumption</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-17T12:52:00+05:30" pubdate data-updated="true">Feb 17<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Following up to the previous posts (here and here) on Baseline Energy Consumption, here is a presentation about the standard:</p>
-
-<script src="http://speakerdeck.com/embed/4f3dd5bcdf5d29001f0047d8.js"></script>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -664,6 +773,14 @@ Deepak.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/03/we-are-hiring/">We Are Hiring!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/energy-consumption-in-manufacturing/">Top Manufacturing Energy Consumers: A Close Look at the Paper Industry</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/04/01/chennai-ruby-meetup/">chennai.rb Meetup</a>
       </li>
     
@@ -673,14 +790,6 @@ Deepak.</p>
     
       <li class="post">
         <a href="/blog/2013/01/08/javaone-presentation/">JavaOne Presentation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/08/precision-manufacturing/">Precision Manufacturing Lecture Videos</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/09/04/imts-oracle-partnership/">Oracle Partnership at IMTS</a>
       </li>
     
   </ul>
